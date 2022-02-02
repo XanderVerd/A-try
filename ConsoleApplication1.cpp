@@ -1,4 +1,5 @@
 #include <iostream>
+#include <cmath>
 
 int main()
 {
@@ -15,22 +16,31 @@ int main()
 		}
 	}
 
+	//harmonic
+	float total = 0;
+	for (int i = 0; i < count; i++) {
+		total += 1.0/numbers[i];
+		//std::cout << total << "\n";
+	}
+	float average = count / total;
+	std::cout << "harmonic average: " << average << "\n";
+
+	//geometric
+	total = 1;
+	for (int i = 0; i < count; i++) {
+		total *= numbers[i];
+		//std::cout << total << "\n";
+	}
+	average = pow(total, (1.0/count));
+	std::cout << "geometric average: " << average << "\n";
+
 	//normal
-	int total = 0;
+	total = 0;
 	for (int i = 0; i < count; i++) {
 		total += numbers[i];
 		//std::cout << total << "\n";
 	}
-	int average = total / count;
+	average = total / count;
 	//std::cout << average << "\n";
 	std::cout << "normal average: " << average << "\n";
-
-	float total2 = 0;
-	for (int i = 0; i < count; i++) {
-		total2 += 1.0/numbers[i];
-		std::cout << total2 << "\n";
-	}
-	average = count / total2;
-	std::cout << "harmonic average: " << average << "\n";
-
 }
