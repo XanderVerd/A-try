@@ -7,7 +7,7 @@ int main()
 	const int Size = 20;
 	float numbers[Size];
 	int count = 0;
-	std::cout << "Sumbit a value and press enter. When you are done submit anything else. A letter is enough." << "\n";
+	std::cout << "Submit a value and press enter. When you are done, submit anything else. A letter is enough." << "\n";
 	for (int i = 0; i < Size; i++) {
 		if (std::cin >> numbers[i]) {
 			count++;
